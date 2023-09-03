@@ -1,0 +1,22 @@
+.ImageCard {
+    height: 400px;
+    width: 300px;
+    box-shadow: 3px 3px lightblue;
+    text-align: center;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: floralwhite;
+    color: darkslateblue;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    white-space: pre-line;
+}
+
+.ImageCard-pic {
+    height: 20vmin;
+    margin-top: 20px;
+}

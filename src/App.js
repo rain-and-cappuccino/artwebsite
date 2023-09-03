@@ -1,27 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+/*import Illustrations from './pages/Illustrations';*/
+import Snow from './assets/Snow.jpg';
+import CupofTea from './assets/CupofTea.jpg';
+import JapaneseSpitz from './assets/JapaneseSpitz.jpg';
+import WinterCamping from './assets/WinterCamping.jpg';
+import Sidenavi from './components/Sidenavi.js';
+import ImageCard from './components/ImageCard';
+import './layouts/Gallery.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload. :D
-		  whoaaaa
-		  hmmm now what.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function App(props) {
+    console.log(props);
+    return (
+        <div className="Gallery">
+            <div className="Sidenavi">
+                <Sidenavi
+                    imgsrc={WinterCamping}
+                    name="Winter Camping"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at aliquam justo.
+                    Cras eu lobortis elit, eu egestas velit. Donec diam augue, congue non volutpat eget,
+                    feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
+                    dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
+                />
+            </div>
+            <div className="Gallery>">
+                <div className="ImageCard">
+                    <ImageCard
+                        imgsrc={Snow}
+                        title="Snow"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at aliquam justo.
+                        Cras eu lobortis elit, eu egestas velit. Donec diam augue, congue non volutpat eget,
+                        feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
+                        dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
+                    />
+                </div>
+                <div className="ImageCard">
+                    <ImageCard
+                        imgsrc={CupofTea}
+                        title="Cup of Tea"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at aliquam justo.
+                        Cras eu lobortis elit, eu egestas velit. Donec diam augue, congue non volutpat eget,
+                        feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
+                        dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
+                    />
+                </div>
+                <div className="ImageCard">
+                    <ImageCard
+                        imgsrc={JapaneseSpitz}
+                        title="Japanese Spitz"
+                        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at aliquam justo.
+                        Cras eu lobortis elit, eu egestas velit. Donec diam augue, congue non volutpat eget,
+                        feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
+                        dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
+                    />
+                </div>
+            </div>
+        </div>
+        );
 }
 
 export default App;
