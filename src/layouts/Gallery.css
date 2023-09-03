@@ -1,8 +1,14 @@
-.Gallery {
+/* This is to fix the size of the right section, .Gallery will take care of the flex and padding */
+.GalleryContainer {
     color: aliceblue;
-    width: 100vw;
+    width: calc(100% - 300px);
     min-height: 100vh;
     background-color: #3d4e85; /* Black */
+    margin-left: 300px;
+}
+
+.Gallery {
     flex-direction: row;
-    padding: 40px 350px;
+    display: flex; /* otherwise, the default display is flow */
+    padding: 40px 50px;
 }

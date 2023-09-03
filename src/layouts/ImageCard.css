@@ -10,13 +10,21 @@
     margin-right: 10px;
     background-color: floralwhite;
     color: darkslateblue;
-    text-overflow: ellipsis;
-    overflow: hidden;
     display: inline-block;
     white-space: pre-line;
 }
 
+.ImageCard > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 10px);
+    height: 130px; /* Idk how to make this fill the remainder of the vertical space, or add ellipses to multiline text */
+    white-space: pre-line;
+    margin: auto; /* text centering */
+}
+
 .ImageCard-pic {
-    height: 20vmin;
+    max-height: 40%;
+    object-fit: contain; /* keep aspect ratio */
     margin-top: 20px;
 }

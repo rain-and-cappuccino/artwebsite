@@ -10,7 +10,8 @@ import './layouts/Gallery.css';
 function App(props) {
     console.log(props);
     return (
-        <div className="Gallery">
+        // className="Gallery" probably unintentional, "Gallery" is already being used below
+        <div>
             <div className="Sidenavi">
                 <Sidenavi
                     imgsrc={WinterCamping}
@@ -21,8 +22,9 @@ function App(props) {
                     dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
                 />
             </div>
-            <div className="Gallery>">
-                <div className="ImageCard">
+            <div className="GalleryContainer">
+                <div className="Gallery">
+                {/* className="ImageCard" is already in the component */}
                     <ImageCard
                         imgsrc={Snow}
                         title="Snow"
@@ -31,8 +33,6 @@ function App(props) {
                         feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
                         dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
                     />
-                </div>
-                <div className="ImageCard">
                     <ImageCard
                         imgsrc={CupofTea}
                         title="Cup of Tea"
@@ -41,8 +41,6 @@ function App(props) {
                         feugiat ultrices elit. Fusce sed lectus cursus, porta sem id, ultricies odio. Vivamus
                         dictum nibh ultricies sapien condimentum, sed feugiat massa venenatis."
                     />
-                </div>
-                <div className="ImageCard">
                     <ImageCard
                         imgsrc={JapaneseSpitz}
                         title="Japanese Spitz"
