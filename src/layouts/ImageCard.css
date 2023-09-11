@@ -12,19 +12,31 @@
     color: darkslateblue;
     display: inline-block;
     white-space: pre-line;
+    display: inline-block;
 }
 
-.ImageCard > p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: calc(100% - 10px);
-    height: 130px; /* Idk how to make this fill the remainder of the vertical space, or add ellipses to multiline text */
-    white-space: pre-line;
-    margin: auto; /* text centering */
-}
+    .ImageCard > p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: calc(100% - 10px);
+        height: 130px; /* Idk how to make this fill the remainder of the vertical space, or add ellipses to multiline text */
+        white-space: nowrap;
+        margin: auto; /* text centering */
+    }
 
 .ImageCard-pic {
     max-height: 40%;
     object-fit: contain; /* keep aspect ratio */
     margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .ImageCard {
+        margin-top: 20px;
+        width: 80vw;
+    }
+
+    .ImageCard-pic {
+        width: 60vw;
+    }
 }

@@ -1,16 +1,12 @@
 .Sidenavi {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
     width: 300px;
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
     background-color: #4d6182;
-    overflow-x: hidden; /* Disable horizontal scroll */
-    overflow-y: hidden;
     vertical-align: top;
     display: inline-block;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: whitesmoke;
 }
 
 .Sidenavi-pic {
@@ -18,7 +14,31 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 10px;
+    margin-top: 50px;
     clip-path: circle(); /* makes image a circle */
     pointer-events: none;
+}
+
+.Sidenavi > p {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    .Sidenavi {
+        width: unset;
+        vertical-align: unset;
+    }
+
+    .Sidenavi-heading {
+        display: flex;
+        align-items: center;
+        margin-left:30px;
+        margin-right: 30px;
+        white-space: initial;
+    }
+
+    .Sidenavi-heading > h1 {
+        margin-top: 50px;
+    }
 }

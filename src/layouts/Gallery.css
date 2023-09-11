@@ -1,14 +1,30 @@
 /* This is to fix the size of the right section, .Gallery will take care of the flex and padding */
+.GalleryPage {
+    display: flex; /* otherwise, the default display is flow */
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #3d4e85;
+}
+
 .GalleryContainer {
     color: aliceblue;
-    width: calc(100% - 300px);
-    min-height: 100vh;
-    background-color: #3d4e85; /* Black */
-    margin-left: 300px;
+    float: left;
+    flex: 1;
 }
 
 .Gallery {
-    flex-direction: row;
-    display: flex; /* otherwise, the default display is flow */
-    padding: 40px 50px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .GalleryPage {
+        flex-direction: column;
+    }
+
+    .GalleryContainer {
+        text-align: center;
+    }
+
+    .Gallery {
+    }
 }
