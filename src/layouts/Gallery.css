@@ -20,11 +20,4 @@
     .GalleryPage {
         flex-direction: column;
     }
-
-    .GalleryContainer {
-        text-align: center;
-    }
-
-    .Gallery {
-    }
 }
